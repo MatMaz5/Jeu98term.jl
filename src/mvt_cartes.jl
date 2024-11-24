@@ -1,8 +1,8 @@
 include("prop_compteur.jl")
 
 
-using Random
-using JLD
+import Random
+import JLD
 
 
 # Mélanger le paquet :
