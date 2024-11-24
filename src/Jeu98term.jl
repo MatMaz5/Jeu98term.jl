@@ -1,5 +1,6 @@
 module Jeu98term
 
-# Write your package code here.
+export partie98
+include("lancement.jl")
 
 end
