@@ -1,0 +1,13 @@
+name = "Jeu98term"
+uuid = "8e199dc7-70f9-4ae4-afa4-d9a4199dc95c"
+authors = ["MatMaz5 <matthiasmazet@gmail.com> and contributors"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.10"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
