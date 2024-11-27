@@ -23,7 +23,7 @@ function mise_en_place(nb_jr)
             Jeu_98[i] = distribution(Jeu_98["pioche"])
         end
         println("Nombre de joueurs correct. Lancement du jeu.")
-        println("(Si vous ne savez plus l'effet ce vos cartes au moment de jouer, entrez 'h' comme indice de carte pour afficher l'aide.)")
+        println("(Si vous ne savez plus l'effet de vos cartes au moment de jouer, entrez '0' comme indice de carte pour afficher l'aide.)")
     else
         println("Nombre de joueurs incorrect. Veuillez changez.")
         nb_jr = nombre()

@@ -14,7 +14,7 @@ function partie98()
             println(Jeu_98[i])
             index = nombre()
             print("\e[2J")
-            if index == "h"
+            if index == 0
                 println("Les cartes nombres ajoute leur valeur au compteur.")
                 println("Le valet ne modifie pas le compteur.")
                 println("La dame enlève 10 au compteur.") 
