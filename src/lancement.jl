@@ -14,12 +14,18 @@ function partie98()
             println(Jeu_98[i])
             index = nombre()
             print("\e[2J")
-            if index < 1 || index > 5
+            if index == "h"
+                println("Les cartes nombres ajoute leur valeur au compteur.")
+                println("Le valet ne modifie pas le compteur.")
+                println("La dame enlève 10 au compteur.") 
+                println("Le roi fixe le compteur à 70.")
+                index = nombre()
+            end
+            while index < 1 || index > 5
                 println("Pas de carte correspondante. Sélectionner un autre nombre.")
                 index = nombre()
-            else
-                jouer(Jeu_98["compteur"], Jeu_98[i], index, Jeu_98["defausse"], Jeu_98["pioche"])
             end
+            jouer(Jeu_98["compteur"], Jeu_98[i], index, Jeu_98["defausse"], Jeu_98["pioche"])
             if Jeu_98["compteur"][] >= 98 break end
             
             ## Pas sûr que cette partie marche
