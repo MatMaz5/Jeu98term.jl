@@ -13,7 +13,6 @@ function partie98()
             println("Quelle carte voulez-vous jouer ? Entrer son emplacement (1 à 5).")
             println(Jeu_98[i])
             index = nombre()
-            print("\e[2J")
             if index == 0
                 println("Les cartes nombres ajoute leur valeur au compteur.")
                 println("Le valet ne modifie pas le compteur.")
@@ -25,6 +24,7 @@ function partie98()
                 println("Pas de carte correspondante. Sélectionner un autre nombre.")
                 index = nombre()
             end
+            print("\e[2J")
             jouer(Jeu_98["compteur"], Jeu_98[i], index, Jeu_98["defausse"], Jeu_98["pioche"])
             if Jeu_98["compteur"][] >= 98 break end
             
