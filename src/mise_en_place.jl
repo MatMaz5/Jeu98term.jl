@@ -2,6 +2,18 @@ include("mvt_cartes.jl")
 include("tests_anti_erreurs.jl")
 
 
+# Création d'un paquet de 52 cartes :
+function Paquet52() 
+    paquet = Paquet(Carte[])
+    for couleur in 1:4
+        for rang in 1:13
+            push!(paquet.cartes, Carte(rang, couleur))
+        end
+    end
+    paquet
+end
+
+
 # Création des mains des joueurs (et de la pioche par extension) :
 function distribution(paquet::Paquet)
     joueur = Paquet(Carte[])

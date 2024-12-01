@@ -17,16 +17,6 @@ struct Paquet
     cartes :: Array{Carte, 1} 
 end
 
-function Paquet52() 
-    paquet = Paquet(Carte[])
-    for couleur in 1:4
-        for rang in 1:13
-            push!(paquet.cartes, Carte(rang, couleur))
-        end
-    end
-    paquet
-end
-
 function Base.show(io::IO, paquet::Paquet) 
     for carte in paquet.cartes
         print(io, carte, " ")
