@@ -15,7 +15,7 @@ end
 
 
 # Création des mains des joueurs (et de la pioche par extension) :
-function distribution(paquet::Paquet)
+function main_jr(paquet::Paquet)
     joueur = Paquet(Carte[])
     for i in 1:5
         joueur = push!(joueur, pop!(paquet))
@@ -32,7 +32,7 @@ function mise_en_place(nb_jr)
     Jeu_98["compteur"] = Ref(0)
     if 2 <= nb_jr <= 5
         for i in 1:nb_jr
-            Jeu_98[i] = distribution(Jeu_98["pioche"])
+            Jeu_98[i] = main_jr(Jeu_98["pioche"])
         end
         println("Nombre de joueurs correct. Lancement du jeu.")
         println("(Si vous ne savez plus l'effet de vos cartes au moment de jouer, entrez '0' comme indice de carte pour afficher l'aide.)")
